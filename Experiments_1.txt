@@ -1,0 +1,208 @@
+<!-- This is a comment -->
+<!-- Lists.html -->
+
+<!-- 1.a. Write a HTML program, to explain the working of lists. 
+Note: It should have ordered list, unordered list, nested lists and order list  in an unordered list and definition lists -->
+<!---------------------------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Lists </title>
+</head>
+<body>
+
+    <h1>HTML Lists</h1>
+
+    <!-- Ordered List -->
+    <h2>1. Ordered List (Numbered)</h2>
+    <p>Steps to create a simple website:</p>
+    <ol>
+        <li>Create an HTML file</li>
+        <li>Add a head and body section</li>
+        <li>Write content using tags</li>
+        <li>Save and open in browser</li>
+    </ol>
+
+    <!-- Unordered List -->
+   <h2>2. Unordered List (Bulleted)</h2>
+    <p>Web Technologies :</p>
+    <ul type="disc">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+<!-- Nested List -->
+<h2>3. Nested List (List inside List)</h2>
+<ul>
+  <li>Frontend Technologies
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </li>
+  <li>Backend Technologies
+    <ul>
+      <li>Java</li>
+      <li>Python</li>
+      <li>PHP</li>
+    </ul>
+  </li>
+</ul>
+    <!-- Mixed List -->
+ <!--Ordered inside Unordered -->
+
+<!-- Mixed List -->
+<h2>4. Mixed List (Ordered inside Unordered)</h2>
+<ul>
+  <li>Frontend Technologies
+    <ol>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ol>
+  </li>
+  <li>Backend Technologies
+    <ol>
+      <li>Java</li>
+      <li>Python</li>
+      <li>PHP</li>
+    </ol>
+  </li>
+</ul>
+    <!-- Definition List -->
+    <h2>5. Definition List (Term - Meaning)</h2>
+    <dl>
+  <dt>HTML</dt>
+  <dd>Hyper Text Markup Language</dd>
+
+  <dt>CSS</dt>
+  <dd>Cascading Style Sheets</dd>
+
+  <dt>JS</dt>
+  <dd>JavaScript</dd>
+</dl>
+
+</body>
+</html>
+================================================================================================================================================
+<!-- This is a comment -->
+<!-- hyperlinks.html--> 
+<!-- 1.b. Write a HTML Program, to explain the working of hyperlinks using <a> tag and href, target attributes -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hyperlinks</title>
+</head>
+<body>
+    <h2>Click the links below to visit different websites:</h2>
+   <ol>
+    <!-- Opens the link in the same tab -->
+    <li><a href="https://www.google.com">Google</a><br></li>
+
+    <!-- Opens the link in a new tab or window -->
+    <li><a href="https://www.hackerrank.com" target="_blank">Hacker Rank</a></li>
+    <li><a href="https://www.kitsguntur.ac.in" target="_blank">KITS</a></li>
+  </ol>
+ 
+</body>
+</html>
+================================================================================================================================================
+<!-- images.html>
+
+<!-- 1.c Create a html document that has your image and your friends image with specific height and width. Also when clicked on the images it should navigate to their respective profiles-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Profile and Friend's Profile</title>
+</head>
+<body>
+
+  <h2>My Profile</h2>
+  <a href="my_profile.html" target="_blank">
+    <img src="my_image.jpg" alt="My Image" width="200" height="200">
+  </a>
+
+  <h2>Friend's Profile</h2>
+  <a href="friend_profile.html" target="_blank">
+    <img src="friend_image.jpg" alt="Friend's Image" width="200" height="200">
+  </a>
+
+</body>
+</html>
+------------------------------------------------------------------------------------------------------------------------------------------------
+<!-- my_profile.html-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Profile</title>
+</head>
+<body>
+
+  <h1>My Profile</h1>
+  <img src="my_image.jpg" alt="My Image" width="200" height="200">
+  <p>Name: Ravi</p>
+  <p>Role: Web Developer</p>
+  <p>Location: India</p>
+
+  <a href="images.html">Back to Home</a>
+
+</body>
+</html>
+------------------------------------------------------------------------------------------------------------------------------------------------
+<!--friend_profile.html-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Friend's Profile</title>
+</head>
+<body>
+
+  <h1>Friend's Profile</h1>
+  <img src="friend_image.jpg" alt="Friend's Image" width="200" height="200">
+  <p>Name: Mahesh</p>
+  <p>Role: Software Engineer</p>
+  <p>Location: Hyderabad</p>
+
+  <a href="images.html">Back to Home</a>
+
+</body>
+</html>
+================================================================================================================================================
+<!-- image_gallary.html-->
+<!--1.d. Write a html program, in such a way that, rather than placing large images on a page , the preferred technique is to use thumbnails by setting the height and width parameters to something like to 100*100 pixels. Each thumbnail image is also a link to a full sized version of the image. Create an image gallery using this technique -->
+<!---------------------------------------------------------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thumbnail Image Gallery</title>
+</head>
+<body>
+
+  <h1>Image Gallery using Thumbnails</h1>
+
+  <!-- Thumbnail 1 -->
+  <a href="1.jpg" target="_blank">
+    <img src="1.jpg" alt="Image 1" width="100" height="100">
+  </a>
+
+  <!-- Thumbnail 2 -->
+  <a href="2.jpg" target="_blank">
+    <img src="2.jpg" alt="Image 2" width="100" height="100">
+  </a>
+
+  <!-- Thumbnail 3 -->
+  <a href="3.jpg" target="_blank">
+    <img src="3.jpg" alt="Image 3" width="100" height="100">
+  </a>
+
+  <!-- Thumbnail 4 -->
+  <a href="4.jpg" target="_blank">
+    <img src="4.jpg" alt="Image 4" width="100" height="100">
+  </a>
+
+</body>
+</html>
