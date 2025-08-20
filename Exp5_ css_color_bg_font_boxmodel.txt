@@ -1,0 +1,73 @@
+<!-- css_color_bg_font_boxmodel.html -->
+<!-- 5. CSS with Color, Background, Font, Text and CSS Box Model
+a. write program to demonstrate the various ways you can reference a color in CSS.
+b. Write a CSS rule that places a background image halfway down the page, titling it
+horizontally. The image should remain in place when the user scrolls up or down
+c. Write a program using the following terms related to CSS font and text:
+i. font-size ii. font-weight iii. font-style iv. text-decoration, v. text-transformation vi. text-alignment
+d. write a program, to explain the importance of CSS Box model using
+i. Content ii. Border iii. Margin iv. padding
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS: Color, Background, Font, Text and CSS Box Model</title>
+  <style>
+    /* a. Different ways to apply color */
+    h1 { color: red; }                /* named color */
+    h2 { color: #00ff00; }            /* hex code */
+    h3 { color: rgb(0, 0, 255); }     /* RGB */
+    p { color: rgba(255, 165, 0, 0.9);} /* RGBA with opacity */
+
+    /* b. Background image */
+    body {
+      background-image: url("https://www.w3schools.com/css/img_tree.png");
+      background-repeat: repeat-x;       /* horizontal tiling */
+      background-attachment: fixed;      /* stays fixed when scrolling */
+      background-position: center 50%;   /* halfway down the page */
+    }
+
+    /* c. Font & Text properties */
+    .text-demo {
+      font-size: 20px;             /* i. font-size */
+      font-weight: bold;           /* ii. font-weight */
+      font-style: italic;          /* iii. font-style */
+      text-decoration: underline;  /* iv. text-decoration */
+      text-transform: uppercase;   /* v. text-transformation */
+      text-align: center;          /* vi. text-alignment */
+      color: darkblue;
+      background: lightyellow;
+    }
+
+    /* d. CSS Box Model */
+    .box {
+      margin: 20px;          /* space outside */
+      border: 3px solid black; /* border */
+      padding: 15px;         /* space inside */
+      width: 200px;          /* content area */
+      background: lightgray;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Colors -->
+  <h1>Color : Named Color (Red)</h1>
+  <h2>Color : Hex (#00ff00)</h2>
+  <h3>Color : RGB (0,0,255)</h3>
+  <p>Color  : RGBA with opacity</p>
+
+  <!-- Font & Text -->
+  <div class="text-demo">
+    This is CSS Font and Text Demonstration
+  </div>
+
+  <!-- Box Model -->
+  <div class="box">
+    This is a Box Model (content + padding + border + margin).
+  </div>
+
+</body>
+</html>
