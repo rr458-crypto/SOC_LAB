@@ -1,0 +1,47 @@
+<!-- types_of_styles.html-->
+<!-- 3. c. write a program to apply different types (or levels of styles or style specification formats)
+- inline, internal, external styles to HTML elements(identify selector, property and value) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Style</title>
+
+    <!-- External Style -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- Internal Style -->
+    <style>
+        /* Selector: h2, Property: color, Value: blue */
+        h2 {
+            color: blue;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Selector: .internal-class, Property: background-color, Value: lightyellow */
+        .internal-class {
+            background-color: lightyellow;
+            padding: 10px;
+            border: 2px solid orange;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Inline Style -->
+    <h1 style="color: red; text-align: center;">
+        Inline Style
+    </h1>
+    
+    <!-- Internal Style -->
+    <p class="internal-class">
+        This paragraph uses internal CSS with a class selector.
+    </p>
+
+    <!-- External Style -->
+    <p class="external-class">
+        This paragraph uses external CSS from styles.css.
+    </p>
+
+</body>
+</html>
