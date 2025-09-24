@@ -1,0 +1,49 @@
+1. Inline CSS
+	Write CSS property(ies) and value(s) inside the HTML element using the style attribute.
+
+Syntax:
+<tag style="property: value;">Content</tag>
+Example:
+
+<p style="color: red;">Hello</p>
+
+2. Internal CSS
+	Write CSS property(ies) and value(s) inside the <head> section of the HTML page using the <style> tag.
+Syntax:
+<head>
+  <style>
+    selector { property: value; }
+  </style>
+</head>
+
+Example:
+<head>
+  <style>
+    p { color: blue; }
+  </style>
+</head>
+
+3. External CSS
+
+	Write CSS property(ies) and value(s) in a separate style.css file, and link it to the HTML page inside the <head> section using the <link> tag.
+
+1. Create a separate file named style.css.
+2. Write CSS property(ies) and value(s) inside it.
+
+Syntax (in style.css):
+
+selector {
+  property: value;
+}
+
+Example (style.css):
+p {
+  color: green;
+}
+
+3. Link this CSS file in your HTML page inside the <head> section using <link> tag:
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
