@@ -1,0 +1,152 @@
+1. Simple Selectors
+a) Element Selector – selects all elements of a type
+Syntax:
+element {
+  property: value;
+}
+Example:
+h1 { color: blue; }  /* element selector */
+
+<h1>Simple Selector</h1>
+
+b) ID Selector – selects a specific element with an id
+Syntax:
+#idname {
+  property: value;
+}
+Example:
+#p1 { color: red; }  /* id selector */
+
+<p id="p1">ID Selector</p>
+
+c) Class Selector – selects elements with a class attribute
+Syntax:
+.classname {
+  property: value;
+}
+Example:
+.highlight { background: yellow; } /* class selector */
+
+<p class="highlight">This is a paragraph with a class selector</p>
+
+d) Group Selector – style multiple elements at once
+Syntax:
+selector1, selector2, selector3 {
+  property: value;
+}
+
+
+Example:
+p, h1 { font-style: italic; }  /* group selector */
+
+<h1>Heading in Italic</h1>
+<p>Paragraph in Italic</p>
+
+e) Universal Selector – select all elements
+Syntax:
+* {
+  property: value;
+}
+Example:
+* { font-family: Arial; }  /* universal selector */
+
+<h1>Heading</h1>
+<p>Paragraph</p>
+<button>Click</button>
+
+2. Combinator Selectors
+a) Descendant Selector – select all descendant elements inside a parent
+Syntax:
+parent descendant {
+  property: value;
+}
+
+Example:
+div p { color: green; }  /* descendant selector */
+<div>
+  <p>Paragraph inside div</p>
+</div>
+
+
+b) Child Selector – select direct children only
+Syntax:
+parent > child {
+  property: value;
+}
+
+Example:
+div > span { color: purple; }  /* child selector */
+<div>
+  <span>Direct child span</span>
+  <p>Paragraph inside div</p>
+</div>
+c) Adjacent Sibling Selector – select element immediately after another
+Syntax:
+element1 + element2 {
+  property: value;
+}
+
+Example:
+h2 + p { background-color: lightgray; }  /* adjacent sibling selector */
+
+<h2>Heading</h2>
+<p>Paragraph after heading (light gray)</p>
+<p>Paragraph not affected</p>
+
+d) General Sibling Selector – select all siblings after element
+Syntax:
+element1 ~ element2 {
+  property: value;
+}
+
+Example:
+h3 ~ ul { border: 1px solid black; }  /* general sibling selector */
+
+<h3>Heading</h3>
+<ul><li>First list</li></ul>
+<ul><li>Second list</li></ul>
+
+3. Pseudo-class Selector
+Style element in a specific state (hover, focus, active, etc.)
+Syntax:
+selector:pseudo-class {
+  property: value;
+}
+
+Example:
+a:hover { color: orange; }  /* pseudo-class selector */
+<a href="#">Hover over this link</a>
+
+4. Pseudo-element Selector
+Style part of an element
+Syntax:
+selector::pseudo-element {
+  property: value;
+}
+
+Example:
+p::first-letter {
+  font-size: 24px;
+  color: brown;
+}  /* pseudo-element selector */
+
+<p>Hello world</p> <!-- First letter “H” is brown and bigger -->
+Common pseudo-elements: ::first-letter, ::first-line, ::before, ::after
+
+5. Attribute Selector
+
+Style elements with a specific attribute/value
+
+Syntax:
+selector[attribute="value"] {
+  property: value;
+}
+
+Example:
+button[type="button"] {
+  background-color: blue;
+  color: white;
+}  /* attribute selector */
+
+<button type="button">Click Me</button>
+<button type="submit">Submit</button> <!-- Not affected -->
