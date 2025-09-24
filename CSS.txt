@@ -1,0 +1,23 @@
+CSS
+======
+CSS (Cascading Style Sheets) is a language used to style HTML elements.
+In CSS, "style" means applying CSS properties and values to an HTML element.
+
+CSS Property(ies) and Value(s):
+Syntax:
+property: value;
+
+Example:
+color: red;
+font-size: 20px;
+
+How to Apply CSS Property(ies) and Value(s) to HTML Element(s):
+--------------------------------------------------------------
+1. Write HTML element(s) in your HTML page.
+2. Choose a method to apply CSS: inline, internal, or external.
+3. Select the element using a selector: (tag, .class, or #id)
+4. Write/apply CSS property(ies) and value(s) inside style="" (for inline CSS) or inside { } (for internal/external CSS) 
+ 
+
+
+
