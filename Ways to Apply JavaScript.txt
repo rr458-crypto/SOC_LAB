@@ -1,0 +1,54 @@
+Ways to Apply JavaScript
+1. Inline JavaScript
+Write JavaScript code directly inside an HTML element using event attributes like onclick, onmouseover, etc.
+Syntax:
+<tag event="JavaScript code">Content</tag>
+
+
+Example:
+<button onclick="alert('Button clicked!')">Click Me</button>
+
+2. Internal JavaScript
+Write JavaScript code inside the same HTML file, within the <script> tag (usually placed at the bottom of <body>).
+
+Syntax:
+
+<script>
+  // JavaScript code here
+</script>
+
+Example:
+<body>
+  <p id="demo">Hello</p>
+  <button onclick="changeText()">Click Me</button>
+
+  <script>
+    function changeText() {
+      document.getElementById("demo").innerHTML = "Text changed!";
+    }
+  </script>
+</body>
+
+3. External JavaScript
+Write JavaScript code in a separate file (e.g., script.js) and link it to your HTML using the <script src="..."> tag.
+
+Steps:
+1. Create a separate file named script.js.
+
+2. Write JavaScript code inside it.
+
+3. Link it in your HTML file (usually before </body>).
+
+Syntax (in script.js):
+
+// script.js
+function showMessage() {
+  alert("Hello from external JS!");
+}
+
+
+HTML Example:
+<body>
+  <button onclick="showMessage()">Click Me</button>
+  <script src="script.js"></script>
+</body>
