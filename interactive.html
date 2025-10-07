@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Without JavaScript</title>
+  
+</head>
+<body>
+  <h1> "When a page is opened, it starts running in the browser."<br>
+  </h1>
+  <h2> Web Page( only HTML+CSS ) Without JavaScript <br>
+    It only shows information(text, images, and styles)but does not react to user actions.The page is static. </h2>
+  <h2>Welcome</h2>
+  <p>This is a static page. Nothing happens if you click or type.</p>
+  <button>Click Me</button> <!-- Just a button, no action -->
+  <input type="text">
+
+ <h2> Web Page(HTML + CSS) With JavaScript <br>
+  The page becomes interactive. It reacts to your actions.</h2>
+  <p id="msg">This is a static text.</p>
+  
+  <!-- Button shows popup -->
+  <button onclick="alert('Hello! You clicked me!')">Click Me</button>
+  
+  <!-- Change text on button click -->
+  <button onclick="document.getElementById('msg').innerText='Text Changed at runtime(dynamic)!'">
+    Change Text
+  </button>
+  <input type="text" onkeyup="console.log('You typed: ' + this.value)">
+  <p onmouseover="this.style.color='blue'">Move mouse here</p>
+  <p id="myText">Hello World!</p>
+<button onclick="document.getElementById('myText').style.color='red'">
+  Make Red
+</button>
+ <p id="myText1">Hello World!</p>
+<button onclick="document.getElementById('myText1').style.backgroundColor='yellow'">
+  Yellow Background
+</button>
+<p id="myText2">Hello World!</p>
+<button onclick="document.getElementById('myText2').style.fontSize='30px'">
+  Bigger Text
+</button>
+ <p style="color:orange;">This is dynamic page - Dynamic means the page changes or reacts during runtime.</p>
+ JS executes at runtime (line by line, or on user actions) in browser
+</body>
+</html>
