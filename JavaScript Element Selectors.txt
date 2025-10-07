@@ -1,0 +1,74 @@
+JavaScript Element Selectors
+1. ID Selector
+Selects a single element using its id.
+
+Syntax:
+document.getElementById("idname");
+
+
+Example:
+<p id="mypara">Hello by ID</p>
+<script>
+  let para = document.getElementById("mypara");
+  para.style.color = "red";
+</script>
+
+2. Class Selector
+Selects one or more elements using class.
+
+Syntax:
+document.getElementsByClassName("classname");   // returns HTMLCollection
+document.querySelector(".classname");           // first match
+document.querySelectorAll(".classname");        // all matches (NodeList)
+
+
+Example:
+<p class="highlight">First</p>
+<p class="highlight">Second</p>
+
+<script>
+  let paras = document.getElementsByClassName("highlight");
+  for (let p of paras) {
+    p.style.background = "yellow";
+  }
+</script>
+
+3. Name Selector
+Selects elements by their name attribute.
+
+
+Syntax:
+document.getElementsByName("namevalue");
+
+Example:
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+
+<script>
+  let radios = document.getElementsByName("gender");
+  radios.forEach(r => console.log(r.value));
+</script>
+
+4. Attribute Selector
+Select elements with a specific attribute.
+
+Syntax:
+document.querySelectorAll("[attribute='value']");
+
+Example:
+<button type="button">Click Me</button>
+<button type="submit">Submit</button>
+
+<script>
+  let btns = document.querySelectorAll("button[type='button']");
+  btns.forEach(b => {
+    b.style.background = "blue";
+    b.style.color = "white";
+  });
+</script>
+----------------------------------------------------------------------
+ID → document.getElementById("id")
+Class → document.getElementsByClassName("class")
+Name → document.getElementsByName("name")
+Attribute → document.querySelectorAll("tag[attr='value']")
+---------------------------------------------------------------------
