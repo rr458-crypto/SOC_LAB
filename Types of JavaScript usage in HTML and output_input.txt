@@ -1,0 +1,47 @@
+1. Types of JavaScript usage in HTML
+1. Internal  JavaScript
+     <script>
+        function internalJS() {
+            alert("Internal JS!");
+        }
+    </script>
+    
+2. External JavaScript
+    <script src="external.js"></script>
+
+
+external.js
+function externalJS() {
+    alert("External JS!");
+}
+
+2. JavaScript output methods
+1. alert()
+Example:
+	alert("This is displayed using alert()");
+2. console.log()
+Example:
+    	console.log("This is displayed in the console using console.log()");
+3. document.write()
+Example:
+	document.write("This is displayed using document.write()");
+4. innerHTML
+Example:
+	document.getElementById("id1").innerHTML = "JavaScript Output method!";
+
+3. JavaScript input methods
+1. Using prompt()
+
+Example:
+let name = prompt("Enter your name:");
+            alert("Name : " + name );
+
+2. Using HTML Form Inputs
+Example:
+<input type="text" id="username" placeholder="Enter your name">
+let name = document.getElementById("username").value;
+      alert("Hello, " + name + "!");
+
+}
+
+
