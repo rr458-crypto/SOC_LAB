@@ -40,8 +40,9 @@ let name = prompt("Enter your name:");
 Example:
 <input type="text" id="username" placeholder="Enter your name">
 let name = document.getElementById("username").value;
-      alert("Hello, " + name + "!");
+      alert("Name " + name + "!");
 
 }
+
 
 
