@@ -13,7 +13,7 @@ Number: numeric values
 let age = 25;
 
 String: text in quotes
-let name = "Ranga";
+let name = "xyz";
 
 Boolean: true or false
 let isAdult = true;
@@ -45,26 +45,11 @@ var (old, function-scoped)
 ---------------------------
 var name = "abc";
 
-function testVar() {
-    var name = "abc";
-    if(true) {
-        var name = "xyz"; // same variable
-        console.log(name); // xyz
-    }
-    console.log(name); // xyz
-}
-testVar();
-
 let (ES6, block-scoped)
 ------------------------
 let age = 25;
-if(true){
-    let age = 30; // different variable
-    console.log(age); // 30
-}
-console.log(age); // 25
-
 const (constant, cannot be changed)
+-----------------------------------
 const pi = 3.14;
 
 4. Conditions
@@ -193,3 +178,4 @@ p1.age = -10; // age is invalid!
 p1.display(); // name: abc age: 20
 p1.age = 35;  // valid
 p1.display(); // name: abc age: 35
+
