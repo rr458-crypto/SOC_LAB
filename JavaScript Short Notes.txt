@@ -1,0 +1,195 @@
+JavaScript Short Notes
+1. Introduction
+1.JavaScript (JS) is a scripting language.
+2.Executes in the browser (also on servers with Node.js).
+3.Interpreted: runs line by line, no compiler needed.
+4.Makes web pages interactive and can validate user input.
+5.Dynamically typed: variable types are determined at runtime.
+6.Supports procedural and object-oriented programming.
+
+2. Data Types
+Primitive Data Types (Single Value)
+Number: numeric values
+let age = 25;
+
+String: text in quotes
+let name = "Ranga";
+
+Boolean: true or false
+let isAdult = true;
+
+Undefined: variable declared but not assigned
+let x;
+console.log(x); // undefined
+
+Null: represents empty value
+let y = null;
+
+Non-Primitive Data Types (Reference/Complex)
+Object: key-value pairs
+let person = {name: "abc", age: 25};
+
+Array: list of values
+let numbers = [1,2,3,4];
+
+Function: block of code performing a task
+function display(){ console.log("Hello"); }
+
+Date: stores date and time
+let today = new Date();
+
+3. Variables
+Used to store data.
+Keywords: var, let, const
+var (old, function-scoped)
+---------------------------
+var name = "abc";
+
+function testVar() {
+    var name = "abc";
+    if(true) {
+        var name = "xyz"; // same variable
+        console.log(name); // xyz
+    }
+    console.log(name); // xyz
+}
+testVar();
+
+let (ES6, block-scoped)
+------------------------
+let age = 25;
+if(true){
+    let age = 30; // different variable
+    console.log(age); // 30
+}
+console.log(age); // 25
+
+const (constant, cannot be changed)
+const pi = 3.14;
+
+4. Conditions
+
+Used to perform actions based on conditions.
+
+if, else if, else, switch
+--------------------------
+
+let score = 85;
+if(score >= 90){
+  console.log("Grade A");
+} else if(score >= 75){
+  console.log("Grade B");
+} else {
+  console.log("Grade C");
+}
+
+let day = 3;
+switch(day){
+  case 1: console.log("Monday"); break;
+  case 2: console.log("Tuesday"); break;
+  case 3: console.log("Wednesday"); break;
+  default: console.log("Other Day");
+}
+
+5. Loops
+Used to repeat code multiple times.
+for, while, do-while
+---------------------
+
+// for loop
+for(let i=1; i<=5; i++){ console.log(i); }
+
+// while loop
+let j=1;
+while(j<=5){ console.log(j); j++; }
+
+// do-while loop
+let k=1;
+do{ console.log(k); k++; } while(k<=5);
+
+6. Functions (Procedural JavaScript)
+Blocks of code that perform tasks.
+
+// Function declaration
+function display(name){ return "name: " + name; }
+console.log(display("abc"));
+
+// Function expression
+const add = function(a, b){ return a + b; }
+console.log(add(5,3));
+
+// Arrow function (ES6)
+const multiply = (a,b) => a * b;
+console.log(multiply(4,2));
+
+7. Object-Oriented JavaScript
+Object Literal
+let person = {
+  name: "abc",
+  age: 20,
+  display: function(){
+    console.log("I'm " + this.name);
+  }
+};
+person.display(); // I'm abc
+---------------------------------------------------
+// Class (ES6)
+class Person {
+    constructor(name, age) {
+        this.name = name; // public property
+        this.age = age;   // public property
+    }
+
+    // Method
+    display() {
+        console.log("I'm " + this.name);
+    }
+}
+
+// Create object
+let person = new Person("abc", 20);
+
+// Call method
+person.display(); // Output: I'm abc
+--------------------------------------------------------------
+Constructor Function (Pre-ES6)
+function Person(name, age){
+  this.name = name;
+  let _age = age;
+
+  this.getAge = function(){ return _age; }
+  this.setAge = function(newAge){
+    if(newAge>0) _age=newAge;
+    else console.log("age is invalid!");
+  }
+  this.display = function(){ console.log("name: "+this.name+" age:"+_age); }
+}
+
+let p = new Person("abc", 20);
+p.display();
+p.setAge(-10);
+p.display();
+
+Class (ES6)
+class Person {
+    #age; // private property
+    constructor(name, age){
+        this.name = name;
+        this.age = age; // uses setter
+    }
+
+    get age(){ return this.#age; }
+    set age(newAge){
+        if(newAge>0) this.#age = newAge;
+        else console.log("age is invalid!");
+    }
+
+    display(){ console.log("name: "+this.name+" age:"+this.#age); }
+}
+
+let p1 = new Person("abc", 20);
+p1.display(); // name: abc age: 20
+p1.age = -10; // age is invalid!
+p1.display(); // name: abc age: 20
+p1.age = 35;  // valid
+p1.display(); // name: abc age: 35
