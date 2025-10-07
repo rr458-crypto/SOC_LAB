@@ -32,11 +32,6 @@ First, create the HTML element(s) you want to interact with. For example:
 <p id="demo">Hello, World!</p>
 <button id="btn">Click Me</button>
 
-
-<p> is a paragraph.
-
-<button> will trigger a JavaScript action.
-
 2. Decide How to Apply JavaScript
 
 There are three main ways:
@@ -49,7 +44,7 @@ a. Inline JavaScript – directly inside the HTML element using onclick, onmouse
 b. Internal JavaScript – inside a <script> tag in your HTML file:
 <script>
   function showMessage() {
-    alert("Hello from internal JS!");
+    alert("internal JS!");
   }
 </script>
 <button onclick="showMessage()">Click Me</button>
@@ -63,7 +58,7 @@ c. External JavaScript – in a separate .js file, linked using <script src="scr
 
 // script.js
 document.getElementById("btn").onclick = function() {
-  alert("Hello from external JS!");
+  alert("external JS!");
 };
 
 3. Select the HTML Element in JavaScript
@@ -97,6 +92,7 @@ Add event listeners:
 document.getElementById("btn").addEventListener("click", function() {
     alert("Button clicked!");
 });
+------------------------------------------------------------------------------------------------
 How to Apply CSS Property(ies) and Value(s) to HTML Element(s):
 --------------------------------------------------------------
 1. Write HTML element(s) in your HTML page.
@@ -112,4 +108,5 @@ Select the HTML element (by id, class, tag, or querySelector).
 Write JavaScript code to change content, style, or add actions/events.
 --------------------------------------------------------------------------
 CSS → mostly static styling
+
 JavaScript → dynamic changes and interactivity
