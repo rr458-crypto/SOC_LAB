@@ -1,0 +1,115 @@
+CSS
+======
+CSS (Cascading Style Sheets) is a language used to style HTML elements.
+In CSS, “style” means applying CSS properties and values to an HTML element.
+
+CSS Property(ies) and Value(s):
+
+Syntax:
+property: value;
+
+Example:
+color: red;
+font-size: 20px;
+
+without CSS: Only plain block text with white background.
+with CSS: Color, Background, Font, Text and CSS Box Model
+
+How to Apply CSS Property(ies) and Value(s) to HTML Element(s):
+--------------------------------------------------------------
+1. Write HTML element(s) in your HTML page.
+2. Choose a method to apply CSS: inline, internal, external.
+3. Select the element using a selector: tag, #id, .class etc..
+4. Write/apply CSS property(ies) and value(s) inside { } (for internal/external CSS) or inside style="" (for inline CSS).
+
+============================================================================================================================
+
+Steps to Apply JavaScript to HTML Elements
+1. Write HTML Elements
+
+First, create the HTML element(s) you want to interact with. For example:
+
+<p id="demo">Hello, World!</p>
+<button id="btn">Click Me</button>
+
+
+<p> is a paragraph.
+
+<button> will trigger a JavaScript action.
+
+2. Decide How to Apply JavaScript
+
+There are three main ways:
+
+a. Inline JavaScript – directly inside the HTML element using onclick, onmouseover, etc.
+
+<button onclick="alert('Button clicked!')">Click Me</button>
+
+
+b. Internal JavaScript – inside a <script> tag in your HTML file:
+<script>
+  function showMessage() {
+    alert("Hello from internal JS!");
+  }
+</script>
+<button onclick="showMessage()">Click Me</button>
+
+
+c. External JavaScript – in a separate .js file, linked using <script src="script.js"></script>:
+<!-- HTML file -->
+<script src="script.js"></script>
+
+<button id="btn">Click Me</button>
+
+// script.js
+document.getElementById("btn").onclick = function() {
+  alert("Hello from external JS!");
+};
+
+3. Select the HTML Element in JavaScript
+Use selectors to target the element you want to manipulate:
+
+By ID:
+document.getElementById("demo")
+
+
+By Class:
+document.getElementsByClassName("myClass")[0]
+
+By Tag Name:
+document.getElementsByTagName("p")[0]
+
+Using querySelector / querySelectorAll (modern way):
+
+document.querySelector("#demo")        // first element with id="demo"
+document.querySelector(".myClass")     // first element with class="myClass"
+document.querySelectorAll("p")         // all <p> elements
+
+4. Apply JavaScript Methods / Properties
+After selecting the element, you can manipulate it:
+Change text:
+document.getElementById("demo").innerHTML = "New Text!";
+
+Change style:
+document.getElementById("demo").style.color = "red";
+
+Add event listeners:
+document.getElementById("btn").addEventListener("click", function() {
+    alert("Button clicked!");
+});
+How to Apply CSS Property(ies) and Value(s) to HTML Element(s):
+--------------------------------------------------------------
+1. Write HTML element(s) in your HTML page.
+2. Choose a method to apply CSS: inline, internal, external.
+3. Select the element using a selector: tag, #id, .class etc..
+4. Write/apply CSS property(ies) and value(s) inside { } (for internal/external CSS) or inside style="" (for inline CSS).
+
+----------------------------------------------------------
+How to Apply JavaScript to HTML Elements
+Write HTML element(s) in your HTML page.
+Choose a method to apply JavaScript: inline, internal, or external.
+Select the HTML element (by id, class, tag, or querySelector).
+Write JavaScript code to change content, style, or add actions/events.
+--------------------------------------------------------------------------
+CSS → mostly static styling
+JavaScript → dynamic changes and interactivity
