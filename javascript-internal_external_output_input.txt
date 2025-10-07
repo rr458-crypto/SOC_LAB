@@ -1,0 +1,112 @@
+<!-- 6. Applying JavaScript - internal and external, I/O, Type Conversion
+a. Write a program to embed internal and external JavaScript in a web page
+-->
+<!-- js_internal_external.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Embed internal and external JS</title>
+</head>
+<body>
+    <h1>Embed internal and external JavaScript</h1>
+    <button onclick="internalJS()">Run Internal JS </button>
+    <button onclick="externalJS()">Run External JS </button>
+    
+    <!-- Internal JavaScript -->
+    <script>
+        function internalJS() {
+            alert("Internal JS!");
+        }
+    </script>
+    <!-- External JavaScript -->
+    <script src="external.js"></script>
+
+</body>
+</html>
+-------------------------------------------------------------------
+external.js
+
+function externalJS() {
+    alert("External JS!");
+}
+------------------------------------------------------------------------------
+<!-- b. Write a program to explain the different ways for displaying output
+-->
+js_output_methods.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Output Methods in JavaScript</title>
+    <script>
+        // 1. Using alert()
+        function showAlert() {
+            alert("This is displayed using alert()");
+        }
+
+        // 2. Using console.log()
+        function showConsole() {
+            console.log("This is displayed in the console using console.log()");
+        }
+
+        // 3. Using document.write()
+        function showDocumentWrite() {
+            document.write("This is displayed using document.write() <br>");
+        }
+
+        // 4. Using innerHTML
+        function showInnerHTML() {
+            document.getElementById("outputDiv").innerHTML = "This is displayed using innerHTML";
+        }
+    </script>
+</head>
+<body>
+    <h1>Different Ways to Display Output</h1>
+
+    <button onclick="showAlert()">Alert</button>
+    <button onclick="showConsole()">Console.log</button>
+    <button onclick="showDocumentWrite()">Document.write</button>
+    <button onclick="showInnerHTML()">InnerHTML</button>
+
+    <div id="outputDiv" style="margin-top:20px; color:blue;"></div>
+</body>
+</html>
+---------------------------------------------------------------------------------------------------------
+<!--6.c. Write a program to explain the different ways for taking input -->
+<!-- js_input_methods.html-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Methods in JavaScript</title>
+    <script>
+        // 1. Using prompt()
+        function takePrompt() {
+            let name = prompt("Enter your name:");
+            alert("Name : " + name );
+        }
+
+        // 2. Using input field and button
+        function takeInputField() {
+            let age = document.getElementById("age").value;
+            alert("Your age is " + age );
+        }
+    </script>
+</head>
+<body>
+    <h1>Different Ways to Take Input</h1>
+
+    <!-- Button for prompt() -->
+    <button onclick="takePrompt()">Input using prompt()</button>
+
+    <br><br>
+
+    <!-- Input field and button -->
+    <input type="text" id="age" placeholder="Enter your age">
+    <button onclick="takeInputField()">Input using input field</button>
+</body>
+</html>
+----------------------------------------------------------------------------------
+
+
+
