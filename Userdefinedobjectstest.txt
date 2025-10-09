@@ -1,0 +1,78 @@
+7. h. Write a program to explain user-defined object by using properties, methods, accessors, constructors and display
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Defined Objects in JavaScript</title>
+</head>
+<body>
+    <h2>Person - User Defined Object in JavaScript</h2>
+    <button onclick="showPerson()">Show Person Info</button>
+
+    <!-- Paragraph to display output -->
+    <p id="output"></p>
+    
+
+    <script>
+        // Person class
+        class Person {
+            _name;
+            _age;
+
+            constructor() {
+                this._name = "";
+                this._age = 0;
+            }
+
+            // Getter for name
+            get name() {
+                return this._name;
+            }
+
+            // Setter for name (at least 6 characters)
+            set name(newName) {
+                if (newName.length >= 6) {
+                    this._name = newName;
+                } else {
+                    alert("Name must be at least 6 characters.");
+                }
+            }
+
+            // Getter for age
+            get age() {
+                return this._age;
+            }
+
+            // Setter for age (must be positive)
+            set age(newAge) {
+                if (newAge > 0) {
+                    this._age = newAge;
+                } else {
+                    alert("Age must be positive.");
+                }
+            }
+
+            // Method to display info
+            display() {
+                return "Name: " + this._name + "<br>Age: " + this._age;
+            }
+        }
+
+        
+        function showPerson() {
+            const person = new Person();
+             
+
+            // Valid 
+           person.name = "abcxyz";
+           person.age = 30;
+           document.getElementById("output").innerHTML = person.display();
+
+            // Invalid 
+           //person.name = "abc";   // invalid
+           //person.age = -5;         // invalid
+           //document.getElementById("invalid").innerHTML = person.display();
+        }
+    </script>
+</body>
+</html>
