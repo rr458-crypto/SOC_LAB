@@ -1,0 +1,1480 @@
+Experiment:1
+1. Lists, Links and Images
+a)	Write a HTML program, to explain the working of lists.
+Note: It should have ordered list, unordered list, nested lists and order list in an unordered list and definition lists
+Source Code: lists.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Lists </title>
+</head>
+<body>
+    <h1>HTML Lists</h1>
+    <!-- Ordered List -->
+    <h2>1. Ordered List (Numbered)</h2>
+    <p>Steps to create a simple website:</p>
+    <ol>
+        <li>Create an HTML file</li>
+        <li>Add a head and body section</li>
+        <li>Write content using tags</li>
+        <li>Save and open in browser</li>
+    </ol>
+    <!-- Unordered List -->
+    <h2>2. Unordered List (Bulleted)</h2>
+    <p>Web Technologies :</p>
+    <ul type="disc">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <!-- Nested List -->
+    <h2>3. Nested List (List inside List)</h2>
+    <ul>
+        <li>Frontend Technologies
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </li>
+        <li>Backend Technologies
+            <ul>
+                <li>Java</li>
+                <li>Python</li>
+                <li>PHP</li>
+            </ul>
+        </li>
+    </ul>
+    <!-- Ordered inside Unordered -->
+    <h2>4. Mixed List (Ordered inside Unordered)</h2>
+    <ul>
+        <li>Frontend Technologies
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ol>
+        </li>
+        <li>Backend Technologies
+            <ol>
+                <li>Java</li>
+                <li>Python</li>
+                <li>PHP</li>
+            </ol>
+        </li>
+    </ul>
+    <!-- Definition List -->
+    <h2>5. Definition List (Term - Meaning)</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Hyper Text Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+        <dt>JS</dt>
+        <dd>JavaScript</dd>
+    </dl>
+</body>
+</html>
+--------------------------------------------------------------------------
+b)	Write a HTML Program, to explain the working of hyperlinks using <a> tag and href,
+target attributes 
+Source Code: hyperlinks.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hyperlinks</title>
+</head>
+<body>
+    <h2>Click the links below to visit different websites:</h2>
+    <ol>
+        <!-- Opens the link in the same tab -->
+        <li><a href="https://www.google.com">Google</a><br></li>
+        <!-- Opens the link in a new tab or window -->
+        <li><a href="https://www.hackerrank.com" target="_blank">Hacker Rank</a></li>
+        <li><a href="https://www.kitsguntur.ac.in" target="_blank">KITS</a></li>
+    </ol>
+</body>
+</html>
+--------------------------------------------------------------------------------------------
+c)	Create a html document that has your image and your friends image with specific
+height and width. Also when clicked on the images it should navigate to their respective profiles
+Source Code: profile_images.html 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile and Friend's Profile</title>
+</head>
+<body>
+    <h2>My Profile</h2>
+    <a href="my_profile.html" target="_blank">
+        <img src="my_image.jpg" alt="My Image" width="200" height="200">
+    </a>
+    <h2>Friend's Profile</h2>
+    <a href="friend_profile.html" target="_blank">
+        <img src="friend_image.jpg" alt="Friend's Image" width="200" height="200">
+    </a>
+</body>
+</html>
+------------------------------------------------------------------------------------
+Source Code: my_profile.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+</head>
+<body>
+    <h1>My Profile</h1>
+    <img src="my_image.jpg" alt="My Image" width="200" height="200">
+    <p>Name: Ravi</p>
+    <p>Role: Web Developer</p>
+    <p>Location: India</p>
+    <a href="profile_images.html">Back to Home</a>
+</body>
+</html>
+-------------------------------------------------------------------------------------
+Source Code: friend_profile.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Friend's Profile</title>
+</head>
+<body>
+    <h1>Friend's Profile</h1>
+    <img src="friend_image.jpg" alt="Friend's Image" width="200" height="200">
+    <p>Name: Mahesh</p>
+    <p>Role: Software Engineer</p>
+    <p>Location: Hyderabad</p>
+    <a href="profile_images.html">Back to Home</a>
+</body>
+</html>
+--------------------------------------------------------------------------------------
+d)	Write a html program, in such a way that, rather than placing large images on a page, the preferred technique is to use thumbnails by setting the height and width parameters to something like to 100*100 pixels. Each thumbnail image is also a link to a fullsized version of the image. Create an image gallery using this technique.
+Source Code: image_gallary.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thumbnail Image Gallery</title>
+</head>
+<body>
+    <h1>Image Gallery using Thumbnails</h1>
+    <!-- Thumbnail 1 -->
+    <a href="1.jpg" target="_blank">
+        <img src="1.jpg" alt="Image 1" width="100" height="100">
+    </a>
+    <!-- Thumbnail 2 -->
+    <a href="2.jpg" target="_blank">
+        <img src="2.jpg" alt="Image 2" width="100" height="100">
+    </a>
+    <!-- Thumbnail 3 -->
+    <a href="3.jpg" target="_blank">
+        <img src="3.jpg" alt="Image 3" width="100" height="100">
+    </a>
+    <!-- Thumbnail 4 -->
+    <a href="4.jpg" target="_blank">
+        <img src="4.jpg" alt="Image 4" width="100" height="100">
+    </a>
+</body>
+</html>
+------------------------------------------------------------------------------------------------------------------------
+Experiment 2:
+2. HTML, Tables, Forms and Frames
+a)	Write a HTML program, to explain the working of tables. (use tags: <table>,<tr>,<th>,<td> and attributes: border, rowspan, colspan
+Source Code: tables.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Table</title>
+    <style>
+        th {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <caption><b>Students Marks Table </b></caption>
+        <tr>
+            <th rowspan="2">Roll No</th>
+            <th rowspan="2">Name</th>
+            <th colspan="3">Marks</th>
+        </tr>
+        <tr>
+            <th>HTML</th>
+            <th>CSS</th>
+            <th>Java Script</th>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>Ravi</td>
+            <td>85</td>
+            <td>78</td>
+            <td>92</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Priya</td>
+            <td>90</td>
+            <td>88</td>
+            <td>95</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>Ajay</td>
+            <td>75</td>
+            <td>80</td>
+            <td>85</td>
+        </tr>
+    </table>
+</body>
+</html>
+----------------------------------------------------------------------------------------------
+b)	Write a HTML program, to explain the working of tables by preparing a timetable, (Note: Use <caption> tag to set the caption to the table & also use cell spacing, cell padding, border, rowspan, colspan etc.) 
+Source Code: timetable.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time Table</title>
+    <style>
+        th {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" cellspacing="5" cellpadding="10">
+        <caption><strong>Weekly Timetable</strong></caption>
+        <!-- Header Row -->
+        <tr>
+            <th>Day</th>
+            <th>8:00 - 9:00</th>
+            <th>9:00 - 10:00</th>
+            <th>10:00 - 11:00</th>
+            <th>11:00 - 12:00<br>(Break)</th>
+            <th>12:00 - 1:00</th>
+            <th>1:00 - 2:00</th>
+            <th>2:00 - 3:00</th>
+        </tr>
+        <!-- Monday -->
+        <tr>
+            <td>Monday</td>
+            <td>HTML</td>
+            <td>C</td>
+            <td>Java</td>
+            <td rowspan="6" align="center">Break</td>
+            <td>HTML</td>
+            <td>C</td>
+            <td>Java</td>
+        </tr>
+        <!-- Tuesday -->
+        <tr>
+            <td>Tuesday</td>
+            <td>C</td>
+            <td>HTML</td>
+            <td>Java</td>
+            <td>Java</td>
+            <td>HTML</td>
+            <td>C</td>
+        </tr>
+        <!-- Wednesday -->
+        <tr>
+            <td>Wednesday</td>
+            <td colspan="3" align="center">SOC Lab</td>
+            <td>C</td>
+            <td>Java</td>
+            <td>HTML</td>
+        </tr>
+        <!-- Thursday -->
+        <tr>
+            <td>Thursday</td>
+            <td colspan="3" align="center">SOC Lab</td>
+            <td>HTML</td>
+            <td>C</td>
+            <td>Java</td>
+        </tr>
+        <!-- Friday -->
+        <tr>
+            <td>Friday</td>
+            <td>C</td>
+            <td>HTML</td>
+            <td>Java</td>
+            <td>Java</td>
+            <td>HTML</td>
+            <td>C</td>
+        </tr>
+        <!-- Saturday -->
+        <tr>
+            <td>Saturday</td>
+            <td colspan="3" align="center">Java Lab</td>
+            <td>Java</td>
+            <td>C</td>
+            <td>HTML</td>
+        </tr>
+    </table>
+</body>
+</html>
+-----------------------------------------------------------------------------------------------------------------
+c)	Write a HTML Program, to explain the working of forms by designing Registration form.(Note: include text field, password field, number of field, date of birth field, checkboxes, radio buttons, list boxes using <Select> & <option> tags, <text area> and two buttons i. e: submit and reset. Use tables to provide a better view.
+Source Code: registration_form.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <form>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <caption><strong>Registration Form</strong></caption>
+            <!-- Name -->
+            <tr>
+                <td><label for="name">Full Name:</label></td>
+                <td><input type="text" id="name" name="name" required></td>
+            </tr>
+            <!-- Password -->
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" name="password" required></td>
+            </tr>
+            <!-- Age -->
+            <tr>
+                <td><label for="age">Age:</label></td>
+                <td><input type="number" id="age" name="age" min="1" max="99" value="" required></td>
+            </tr>
+            <!-- Date of Birth -->
+            <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td><input type="date" id="dob" name="dob" required></td>
+            </tr>
+            <!-- Gender (Radio Buttons) -->
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female" required>
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <!-- Hobbies (Checkboxes) -->
+            <tr>
+                <td>Hobbies:</td>
+                <td>
+                    <input type="checkbox" name="hobby" value="Reading"> Reading
+                    <input type="checkbox" name="hobby" value="Sports"> Sports
+                    <input type="checkbox" name="hobby" value="Music"> Music
+                </td>
+            </tr>
+            <!-- Course (Select Box) -->
+            <tr>
+                <td><label for="course">Select Course:</label></td>
+                <td>
+                    <select id="course" name="course" required>
+                        <option value="">--Select your course--</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="M.Tech">M.Tech</option>
+                        <option value="Ph.D">Ph.D</option>
+                    </select>
+                </td>
+            </tr>
+            <!-- Address (Textarea) -->
+            <tr>
+                <td><label for="address">Address:</label></td>
+                <td><textarea id="address" name="address" rows="4" cols="30"></textarea></td>
+            </tr>
+            <!-- Submit and Reset Buttons -->
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------
+d)	Write a HTML program, to explain the working of frames, such that page is to be divided into 3 parts on either direction. (Note: first frame->image, second frame->paragraph, third frame->hyperlink. And also make sure of using "no frame" attributes such that frames to be fixed).
+Source Code: frames.html 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frames</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <iframe src="image.html" width="33%"></iframe>
+        <iframe src="paragraph.html" width="33%"></iframe>
+        <iframe src="hyperlink.html" width="33%"></iframe>
+        <div>
+            <noframes>
+                <p>Your browser does not support frames/iframes.</p>
+                <p>Please update your browser</p>
+            </noframes>
+</body>
+</html>
+Source Code: image.html
+---------------------------
+<!DOCTYPE html>
+<html>
+<head>
+    <title>image Frame</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <img src="image1.jpg" alt="Image is not found">
+</body>
+</html>
+Source Code: paragraph.html
+-------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paragraph Frame</title>
+</head>
+<body style="font-size:18px; padding:10px;">
+    <p>This is a paragraph loaded in the second frame. It explains how we use separate HTML files in iframes to create a multi-section layout using HTML only.</p>
+</body>
+</html>
+Source Code: hyperlink.html
+-----------------------------
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hyperlink Frame</title>
+</head>
+<body style="text-align:center; padding:20px;">
+    <a href="https://www.google.com" target="_blank">Click here to go to Google</a>
+</body>
+</html>
+--------------------------------------------------------------------------------------------------------------
+Experiment 3:
+3. HTML 5 and Cascading, Style Sheets,  Types of CSS
+a)	Write a HTML program that makes use of <article>, <aside>, <figure>, <figcaption>, <footer>, <header>, <main>, <nav>, <section>, <div>, <span> tags 
+Source Code: html5_tags.html 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML5 Tags</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, nav, main, section, article, aside, footer, div {
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid #ccc;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: blue;
+    }
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1 align="center">My Blog Website</h1>
+    <p align="center">Welcome to my blog</p>
+  </header>
+  <!-- Navigation -->
+  <nav align="center">
+    <a href="home.html" target="_blank">HOME</a>
+    <a href="about.html" target="_blank">ABOUT US</a>
+    <a href="article.html" target="_blank">ARTICLES</a>
+    <a href="contact.html" target="_blank">CONTACT US</a>
+  </nav>
+  <!-- Main Content -->
+  <main>
+    <section>
+      <h2>Technology</h2>
+      <!-- Article -->
+      <article>
+        <h3>What is HTML5?</h3>
+        <p>HTML5 is the latest version of HyperText Markup Language used to structure web pages.</p>
+        <!-- Figure and Figcaption -->
+        <figure>
+          <img src="html5_logo.png" width="100" height="100" alt="HTML5 Logo">
+          <figcaption>Figure: HTML5 Official Logo</figcaption>
+        </figure>
+        <!-- Using span inside paragraph -->
+        <p>HTML5 includes semantic tags like 
+          <span class="highlight">&lt;article&gt;</span> 
+          and 
+          <span class="highlight">&lt;section&gt;</span>.
+        </p>
+      </article>
+    </section>
+    <!-- Aside -->
+    <aside>
+      <h4>Related Links</h4>
+      <ul>
+        <li><a href="https://www.w3schools.com/css/">CSS3 Tutorial</a></li>
+        <li><a href="https://www.w3schools.com/js/">JavaScript Basics</a></li>
+      </ul>
+    </aside>
+  </main>
+  <!-- Div -->
+  <div>
+    <p>This content is inside a <span class="highlight">&lt;div&gt;</span> tag.</p>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Blog | Designed by KITS</p>
+  </footer>
+</body>
+</html>
+----------------------------------------------------------------------------------------------
+Source Code: home.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home - My Blog</title>
+</head>
+<body>
+  <h1>Welcome to My Blog</h1>
+  <p>This is the home page of my blog website.</p>
+</body>
+</html>
+----------------------------------------------------------------------------------------
+Source Code: about.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About - My Blog</title>
+</head>
+<body>
+  <h1>About Us</h1>
+  <p>This blog is created to share web development knowledge.</p>
+</body>
+</html>
+-----------------------------------------------------------------------------------------
+Source Code: article.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Article - My Blog</title>
+</head>
+<body>
+  <h1>What is HTML5?</h1>
+  <p>HTML5 is the latest version of HTML used for structuring webpages.</p>
+</body>
+</html>
+----------------------------------------------------------------------------------------
+Source Code: contact.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact - My Blog</title>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  <p>Email: contact@myblog.com</p>
+</body>
+</html>
+------------------------------------------------------------------------------------------------------------
+b)	Write a HTML program, to embed audio and video into HTML web page 
+Source Code: media.html
+<!DOCTYPE html>
+html>
+
+<head>
+    <title>Embed Audio and Video</title>
+</head>
+
+<body>
+    <div>
+        <h2>Audio</h2>
+        <audio controls>
+            <source src="audios/sample.mp3" type="audio/mp3" />
+            Your browser does not support the audio element.
+        </audio>
+        <h2>Video</h2>
+        <video width="480" height="270" controls>
+            <source src="videos/sample.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+
+</html>
+--------------------------------------------------------------------------------------------------------------
+c)	Write a program to apply different types (or levels of styles or style specification formats)- inline, internal, external styles to HTML elements(identify selector, property and value)
+Source Code: types_of_css.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Styles</title>
+    <!-- External Style -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Internal Style -->
+    <style>
+        /* Selector: h2, Property: color, Value: blue */
+        h2 {
+            color: blue;
+            font-family: Arial, sans-serif;
+        }
+        /* Selector: .internal-class, Property: background-color, Value: lightyellow */
+        .internal-class {
+            background-color: lightyellow;
+            padding: 10px;
+            border: 2px solid orange;
+            width:600px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Inline Style -->
+    <h1 style="color: red;">
+        Inline Style
+    </h1>
+    <!-- Internal Style -->
+    <p class="internal-class">
+        This paragraph uses internal CSS with a class selector.
+    </p>
+    <!-- External Style -->
+    <p class="external-class">
+        This paragraph uses external CSS from styles.css.
+    </p>
+</body>
+</html>
+
+Source Code: styles.css
+-----------------------
+/* Selector: .external-class, Property: background-color, Value: lightgreen */
+.external-class {
+    background-color: lightgreen;
+    font-size: 18px;
+    padding: 8px;
+    border: 2px solid green;
+    width:600px;
+}
+------------------------------------------------------------------------------------------------
+Experiment 4:
+4. Selector forms
+a)	Write a program to apply different types of selector forms
+1. Simple selector(element, id, class, group, universal)
+2. Combinator selector(descendant, child, adjacent sibling, general sibling)
+3. Pseudo-class selector
+4. Pseudo-element selector
+5. Attribute selector
+Source Code: selectors.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Selector Forms</title>
+  <style>
+    /* 1. Simple Selectors */
+    h1 { color: blue; }               /* element selector */
+    #special { color: red; }          /* id selector */
+    .highlight { background: yellow;} /* class selector */
+    p, li { font-style: italic;}     /* group selector */
+    * { font-family: Arial; }         /* universal selector */
+    /* 2. Combinator Selectors */
+    div p { color: red; }           /* descendant */
+    div > span { color: purple; }     /* child */
+    h2 + p { background: lightgray; } /* adjacent sibling */
+    h3 ~ ul { border: 1px solid black;} /* general sibling */
+    /* 3. Pseudo-class Selector */
+    a:hover { color: orange; }
+    /* 4. Pseudo-element Selector */
+   p::first-letter {
+  	font-size: 24px;
+  	color: brown;
+	}
+    /* 5. Attribute Selector */
+    button[id="button"] {
+      background-color: blue;
+      color: white;      
+    }
+  </style>
+</head>
+<body>
+  <h1>Simple Selector</h1>
+  <h2 id="special">ID Selector</h2>
+  <p class="highlight">This is a paragraph with a class selector</p>
+  <div>
+    <p>Descendant selector inside a div</p>
+    <span>Child selector span inside div</span>
+      
+  </div>
+  <!--Select the first <p> element that comes immediately after an <h2>. -->
+  <h2>Heading</h2>
+  <p>This paragraph will get lightgray background</p>
+  <p>This paragraph will NOT get it </p>
+  <!-- Select all <ul> elements that come after an <h2> (not just the first one). -->
+  <h3>Heading</h3> 
+  <ul><li>First list</li></ul> 
+  <ul><li>Second list</li></ul> 
+  <a href="#">Hover over this link</a>
+  <!--  all paragraph First Letter is brown -->
+  <p>Hello world</p>
+  <button type="button" id="button" >Click Me</button>
+</body>
+</html>
+-----------------------------------------------------------------------------------------
+Experiment 5:
+5. CSS with Color, Background, Font, Text and CSS Box Model
+a)	Write program to demonstrate the various ways you can reference a color in CSS.
+b)	Write a CSS rule that places a background image halfway down the page, tiling it
+horizontally. The image should remain in place when the user scrolls up or down
+Source Code: css_color_bg.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Color, Background</title>
+  <style>
+    /* a. Different ways to apply color */
+    h1 { color: red; }                /* named color */
+    h2 { color: #00ff00; }            /* hex code */
+    h3 { color: rgb(0, 0, 255); }     /* RGB */
+    p { color: rgba(255, 165, 0, 0.5);} /* RGBA with opacity */
+    /* b. Background image */
+    body {
+      background-image: url("https://www.w3schools.com/css/img_tree.png");
+      background-repeat: repeat-x;       /* horizontal tiling */
+      background-attachment: fixed;      /* stays fixed when scrolling */
+      background-position: center 50%;   /* halfway down the page */
+    }
+  </style>
+</head>
+<body>
+  <!-- Colors -->
+  <h1>Color : Named Color (Red)</h1>
+  <h2>Color : Hex (#00ff00)</h2>
+  <h3>Color : RGB (0,0,255)</h3>
+  <p>Color  : RGBA with opacity</p>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------
+5.	CSS with Font, Text and CSS Box Model
+c)	Write a program using the following terms related to CSS font and text:
+i. font-size ii. font-weight iii. font-style iv. text-decoration, v. text-transformation vi. text-alignment
+d)	Write a program, to explain the importance of CSS Box model using
+i. Content ii. Border iii. Margin iv. padding
+Source Code: css_font_text_box.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Font, Text and CSS Box Model</title>
+  <style>
+    /* a. Font & Text properties */
+    .text-demo {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: justify;
+    color: blue;
+    background: yellow;
+    display: inline-block;   /* shrink width to content */
+    padding: 5px 10px;      /* optional: space inside background */
+    }    
+   /* b. CSS Box Model */
+    .box {
+      margin: 20px;          /* space outside */
+      border: 3px solid black; /* border */
+      padding: 15px;         /* space inside */
+      width: 200px;          /* content area */
+      background: #f0e68c;
+    }
+  </style>
+</head>
+<body>
+  <!-- Font & Text -->
+  <div class="text-demo">
+    This is CSS Font and Text Demonstration
+  </div>
+  <!-- Box Model -->
+  <div class="box">
+    This is a Box Model (content + padding + border + margin).
+  </div>
+</body>
+</html>
+------------------------------------------------------------------------------------------------
+Experiment 6:
+6. Applying JavaScript - internal and external, I/O, Type Conversion
+a)	Write a program to embed internal and external JavaScript in a web page
+Source Code: js_internal_external.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>internal & external JS</title>
+</head>
+<body>
+    <h1>internal and external JS</h1>
+    <button onclick="internaljs()">Internal JS </button>
+    <button onclick="externaljs()">External JS </button>
+    <!-- Internal JavaScript -->
+    <script>
+        function internaljs() {
+            alert("internal JS!");
+        }
+    </script>
+
+    <!-- External JavaScript -->
+    <script src="external.js"></script>
+
+</body>
+</html>
+external.js
+function externalJS() {
+    alert("External JS!");
+}
+------------------------------------------------------------------------
+b)	Write a program to explain the different ways for displaying output-
+Source Code: js_output_methods.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display output in JavaScript</title>
+    <script>
+        // 1. Using alert()
+        function showAlert() {
+            alert("This is displayed using alert()");
+        }
+        // 2. Using console.log()
+        function showConsole() {
+            console.log("This is displayed in the console using console.log()");
+        }
+        // 3. Using document.write()
+        function showDocumentWrite() {
+            document.write("This is displayed using document.write() <br>");
+        }
+        // 4. Using innerHTML
+        function showInnerHTML() {
+            document.getElementById("outputDiv").innerHTML = "This is displayed using innerHTML";
+        }
+    </script>
+</head>
+<body>
+    <h1>Different Ways to Display Output</h1>
+    <button onclick="showAlert()">Alert</button>
+    <button onclick="showConsole()">Console.log</button>
+    <button onclick="showDocumentWrite()">Document.write</button>
+    <button onclick="showInnerHTML()">InnerHTML</button>
+    <div id="outputDiv" style="margin-top:20px; color:blue;"></div>
+</body>
+</html>
+--------------------------------------------------------------------------------------------------------------
+c)	Write a program to explain the different ways for taking input 
+Source Code: js_input_methods.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Methods in JavaScript</title>
+    <script>
+        // 1. Using prompt()
+        function takePrompt() {
+            let name = prompt("Enter your name:");
+            alert("Your name is  " + name );
+        }
+
+        // 2. Using input field and button
+        function takeInputField() {
+            let age = document.getElementById("age").value;
+            alert("Your age is " + age );
+        }
+    </script>
+</head>
+<body>
+    <h1>Different Ways to Take Input</h1>
+
+    <!-- Button for prompt() -->
+    <button onclick="takePrompt()">Input using prompt()</button>
+
+    <br><br>
+
+    <!-- Input field and button -->
+    <input type="number" id="age" placeholder="Enter your age">
+    <button onclick="takeInputField()">Input using input field</button>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------------
+Experiment 7:
+7. JavaScript Pre-defined and User-defined Objects
+a)	Write a program using document object properties and methods
+b)	Write a program using window object properties and methods
+c)	Write a program using array object properties and methods
+d)	Write a program using math object properties and methods
+e)	Write a program using string object properties and methods
+f)	Write a program using regex object properties and methods
+g)	Write a program using date object properties and methods
+Source Code: predefined.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Pre-defined Objects</title>
+  <script>
+    function show() {
+      let output = "";
+      
+      // a. Document Object
+      output += "Document Title: " + document.title + "<br>";
+      output += "Document URL: " + document.URL + "<br><br>";
+               
+      // b. Window Object
+      output += "Window Width: " + window.innerWidth + "<br>";
+      output += "Window Height: " + window.innerHeight + "<br><br>";
+      
+      // c. Array Object
+      let fruits = ["Apple", "Banana", "Mango"];
+      output += "fruites:"+ fruits+"<br>";
+      output += "Number of Fruits: " + fruits.length + "<br>"; 
+      output += "Reverse:" + fruits.reverse() + "<br><br>";
+
+      // d. Math Object
+      output += "Math PI: " + Math.PI + "<br>";   
+      output += "Square root of 25: " + Math.sqrt(25) + "<br><br>";
+     
+      // e. String Object
+      let str = "JavaScript";
+      output += "String: " + str + "<br>";                  // Property (the string itself)
+      output += "Length of string: " + str.length + "<br>"; // Property
+      output += "Uppercase: " + str.toUpperCase() + "<br><br>"; // Method
+     
+      // f. RegExp Object
+      let pattern = /javascript/i;
+      let text = "HTML,CSS, JavaScript";
+      output += "Contains 'javascript'?: " + pattern.test(text) + "<br><br>";
+      
+      // g. Date Object
+      let today = new Date();
+      output += "Date : " + today + "<br>";
+      output += "Current Date: " + today.toDateString() + "<br>";
+      output += "Current Time: " + today.toLocaleTimeString() + "<br>";
+      
+      document.getElementById("output").innerHTML = output;
+    }
+  </script>
+</head>
+<body>
+  <h1>JavaScript Pre-defined Objects</h1>
+  
+
+  <button onclick="show()">Show</button>
+  <p id="output"></p>
+</body>
+</html>
+--------------------------------------------------------------------------------------------------
+h)	Write a program to explain user-defined object by using properties, methods, accessors, constructors and display
+Source Code: userdefined.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Defined Objects in JavaScript</title>
+</head>
+<body>
+    <h2>Person - User Defined Object in JavaScript</h2>
+    <button onclick="showPerson()">Show Person Info</button>
+
+    <!-- Paragraphs to display output -->
+    <p id="output"></p>
+    <p id="invalid"></p>
+
+    <script>
+        // Person class
+        //User-defined object using class
+        class Person {
+            //Properties (variables that store object data)
+            _name;
+            _age;
+            
+	    // Constructor (automatically called when object is created)
+            constructor() {
+                this._name = ""; // initialize name
+                this._age = 0;    // initialize age
+            }
+
+            // Getter for name
+            get name() {
+                return this._name;
+            }
+
+            // Setter for name (at least 6 characters)
+            set name(newName) {
+                if (newName.length >= 6) {
+                    this._name = newName;
+                } else {
+                     this._name = "Invalid Name (too short)";
+                }
+            }
+
+            // Getter for age
+            get age() {
+                return this._age;
+            }
+
+            // Setter for age (must be positive)
+            set age(newAge) {
+                if (newAge > 0) {
+                    this._age = newAge;
+                } else {
+                    this._age = "Invalid Age (must be positive)";
+                }
+            }
+            // Method to display info
+            display() {
+                return "Name: " + this._name + "<br>Age: " + this._age;
+            }
+        }
+        function showPerson() {
+            
+            // Valid input
+            let validPerson = new Person();
+            validPerson.name = "abcxyz";
+            validPerson.age = 30;
+            document.getElementById("output").innerHTML = "<b>Valid Person:</b><br>" + validPerson.display();
+
+            // Invalid input
+ 	    let invalidPerson = new Person();
+            invalidPerson.name = "abc";   // invalid
+            invalidPerson.age = -5;       // invalid
+            document.getElementById("invalid").innerHTML = "<b>Invalid Person:</b><br>" + invalidPerson.display();
+        }
+    </script>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------------------
+Experiment 8:
+8. Java Script Conditional Statements and Loops
+a)	Write a program which asks the user to enter three integers, obtains the numbers from the user and outputs HTML text that displays the larger number followed by the words "LARGER NUMBER" in an information message dialog. If the numbers are equal, output HTML text as "EQUAL NUMBERS"
+Source Code: largest_number.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Largest of Three Numbers</title>
+</head>
+<body>
+  <h2>Largest of Three Numbers</h2>
+   
+  <input type="number" id="num1" placeholder="Enter First Number"><br><br>
+  <input type="number" id="num2" placeholder="Enter Second Number"><br><br>
+  <input type="number" id="num3" placeholder="Enter Third Number"><br><br>
+
+  <button onclick="findLargest()">Find Largest</button>
+
+  <p id="result"></p>
+
+  <script>
+    function findLargest() {
+      let a = parseInt(document.getElementById("num1").value);
+      let b = parseInt(document.getElementById("num2").value);
+      let c = parseInt(document.getElementById("num3").value);
+
+      if (a === b && b === c) {
+        document.getElementById("result").innerHTML = "EQUAL NUMBERS";
+      } else {
+        let largest = a;
+        if (b > largest) largest = b;
+        if (c > largest) largest = c;
+        document.getElementById("result").innerHTML = largest + " LARGER NUMBER";
+      }
+    }
+  </script>
+</body>
+</html>
+-----------------------------------------------------------------------------------------------------------
+b)	Write a program to display week days using switch case
+Source Code: weekdays_switch.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weekdays using Switch Case</title>
+</head>
+<body>
+  <h2>Display Weekdays</h2>
+  <label>Enter a number (1-7): </label>
+  <input type="number" id="numInput" min="1" max="7">
+  <button onclick="showDay()">Show Day</button>
+  <p id="result"></p>
+  <script>
+    function showDay() {
+      let num = parseInt(document.getElementById("numInput").value);
+      let day;
+      switch(num) {
+        case 1: day = "Sunday"; break;
+        case 2: day = "Monday"; break;
+        case 3: day = "Tuesday"; break;
+        case 4: day = "Wednesday"; break;
+        case 5: day = "Thursday"; break;
+        case 6: day = "Friday"; break;
+        case 7: day = "Saturday"; break;
+        default: day = "Invalid Day";
+      }
+      document.getElementById("result").innerHTML = day;
+    }
+  </script>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------------
+c)	Write a program to print 1 to 10 numbers using for, while and do-while loops 
+Source Code: loops_numbers.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Print Numbers using Loops</title>
+</head>
+<body>
+  <h2>Print Numbers 1 to 10 using Loops</h2>
+  <button onclick="usingFor()">For Loop</button>
+  <button onclick="usingWhile()">While Loop</button>
+  <button onclick="usingDoWhile()">Do-While Loop</button>
+  <p id="output"></p>
+  <script>
+    // For loop
+    function usingFor() {
+      let result = "";
+      for (let i = 1; i <= 10; i++) {
+        result += i + " ";
+      }
+      document.getElementById("output").innerHTML = "For Loop: " + result;
+    }
+    // While loop
+    function usingWhile() {
+      let i = 1, result = "";
+      while (i <= 10) {
+        result += i + " ";
+        i++;
+      }
+      document.getElementById("output").innerHTML = "While Loop: " + result;
+    }
+    // Do-While loop
+    function usingDoWhile() {
+      let i = 1, result = "";
+      do {
+        result += i + " ";
+        i++;
+      } while (i <= 10);
+      document.getElementById("output").innerHTML = "Do-While Loop: " + result;
+    }
+  </script>
+</body>
+</html>
+------------------------------------------------------------------------------------------------------------
+d)	Write a program to print data in object using for-in, for-each and for-of loops 
+Source Code: object_loops.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Object Data using Loops</title>
+</head>
+<body>
+  <h2>Print Data using Loops</h2>
+  <button onclick="showForIn()">For-In Loop</button>
+  <button onclick="showForEach()">For-Each Loop</button>
+  <button onclick="showForOf()">For-Of Loop</button>
+  <p id="output"></p>
+  <script>
+    // Object with key-value pairs
+    let student = { name: "Ravi", age: 20, course: "B.Tech" };
+    // Array for forEach and for-of
+    let numbers = [10, 20, 30, 40, 50];
+    // For-In Loop (object)
+    function showForIn() {
+      let result = "";
+      for (let key in student) {
+        result += key + ": " + student[key] + "<br>";
+      }
+      document.getElementById("output").innerHTML = "For-In Loop:<br>" + result;
+    }
+    // For-Each Loop (array)
+    function showForEach() {
+      let result = "";
+      numbers.forEach(function(value) {
+        result += value + " ";
+      });
+      document.getElementById("output").innerHTML = "For-Each Loop:<br>" + result;
+    }
+    // For-Of Loop (array)
+    function showForOf() {
+      let result = "";
+      for (let value of numbers) {
+        result += value + " ";
+      }
+      document.getElementById("output").innerHTML = "For-Of Loop:<br>" + result;
+    }
+  </script>
+</body>
+</html>
+------------------------------------------------------------------------------------------------------
+e)	Develop a program to determine whether a given number is an 'ARMSTRONG NUMBER' or not.
+[Eg: 153 is an Armstrong number, since sum of the cube of the digits is equal to the number i.e., 13+53+33=153]
+Source Code: armstrong_number.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Armstrong Number Check</title>
+</head>
+<body>
+  <h2>Check Armstrong Number</h2>
+  <label>Enter a number: </label>
+  <input type="number" id="numInput">
+  <button onclick="checkArmstrong()">Check</button>
+  <p id="result"></p>
+  <script>
+    function checkArmstrong() {
+      let num = parseInt(document.getElementById("numInput").value);
+      let original = num;
+      let sum = 0;
+      while (num > 0) {
+        let digit = num % 10;
+        sum += digit * digit * digit;
+        num = Math.floor(num / 10);
+      }
+      if (sum === original) {
+        document.getElementById("result").innerHTML = original + " is an Armstrong Number";
+      } else {
+        document.getElementById("result").innerHTML = original + " is Not an Armstrong Number";
+      }
+    }
+  </script>
+</body>
+</html>
+------------------------------------------------------------------------------------------------------------
+f)	Write program to display the denomination of the amount deposited in the bank in terms of 100's, 50's, 20's,10's 5's &1's (Eg: If deposited amount is Rs.163, the output should be 1-100's,1-50's, 1-10's, 1-2's & 1-1's
+Source Code: denomination.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Denomination Calculator</title>
+</head>
+<body>
+  <h2>Bank Denomination Calculator</h2>
+  <input type="number" id="amount" placeholder="Enter Amount"><br><br>
+  <button onclick="calculateDenomination()">Show Denomination</button>
+  <p id="result"></p>
+  <script>
+    function calculateDenomination() {
+      let amount = parseInt(document.getElementById("amount").value);
+      let originalAmount = amount;
+      let hundreds = Math.floor(amount / 100);
+      amount = amount % 100;
+      let fifties = Math.floor(amount / 50);
+      amount = amount % 50;
+      let twenties = Math.floor(amount / 20);
+      amount = amount % 20;
+      let tens = Math.floor(amount / 10);
+      amount = amount % 10;
+      let fives = Math.floor(amount / 5);
+      amount = amount % 5;
+      let ones = amount;
+      document.getElementById("result").innerHTML =
+        "Amount: Rs." + originalAmount + "<br>" +
+        "100's: " + hundreds + "<br>" +
+        "50's: " + fifties + "<br>" +
+        "20's: " + twenties + "<br>" +
+        "10's: " + tens + "<br>" +
+        "5's: " + fives + "<br>" +
+        "1's: " + ones;
+    }
+  </script>
+</body>
+</html>
+--------------------------------------------------------------------------------------------------------------------
+Experiment 9:
+9.Java Script Functions and Events
+a)	Factorial
+b)	Design a HTML having a text box and four buttons’ names Factorial, Fibonacci, Prime, and Palindrome. When a button is pressed an appropriate function should be called to display
+1.	Factorial of that number
+2.	Fibonacci series up to that number
+3.	 Prime numbers up to that number
+4.	 Is it palindrome or not  
+Source Code: events_buttons.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Factorial, Fibonacci, Prime and Palindrome Operations</title>
+</head>
+<body>
+  <h2>Factorial, Fibonacci, Prime and Palindrome Operations in JavaScript</h2>
+  <input type="number" id="num" placeholder="Enter a number">
+  <br><br>
+  <button onclick="factorial()">Factorial</button>
+  <button onclick="fibonacci()">Fibonacci</button>
+  <button onclick="primeNumbers()">Prime</button>
+  <button onclick="checkPalindrome()">Palindrome</button>
+  <p id="result"></p>
+  <p id="result1"></p>
+  <p id="result2"></p>
+  <p id="result3"></p>
+  <script>
+    // Factorial
+    function factorial() {
+      let n = parseInt(document.getElementById("num").value);
+      let fact = 1;
+      for(let i = 1; i <= n; i++) {
+        fact = fact*i;
+      }
+      document.getElementById("result").innerHTML = "Factorial of " + n + " is " + fact;
+    }
+    // Fibonacci series
+    function fibonacci() {
+  let n = parseInt(document.getElementById("num").value);
+  if (n < 0) {
+    document.getElementById("result1").innerHTML = "Please enter a non-negative number";
+    return;  // stop the function
+  }
+  let series = [];
+  let a = 0, b = 1;
+  for(let i = 0; i < n; i++) {
+    series.push(a);
+    let temp = a + b;
+    a = b;
+    b = temp;
+  }
+  document.getElementById("result1").innerHTML =
+    "Fibonacci series up to " + n + ": " + series.join(", ");
+    }
+    function primeNumbers() {
+  let n = parseInt(document.getElementById("num").value);
+  if (n < 2) {
+    document.getElementById("result2").innerHTML = "There are no prime numbers up to " + n;
+    return;
+  }
+  let primes = [];
+  for (let i = 2; i <= n; i++) {
+    let count = 0; // count of divisors
+    for (let j = 1; j <= i; j++) {
+      if (i % j === 0) {
+        count++;
+      }
+    }
+    if (count === 2) { // divisible by 1 and itself
+      primes.push(i);
+    }
+  }
+  document.getElementById("result2").innerHTML = "Prime numbers up to " + n + ": " + primes.join(", ");
+}
+  function checkPalindrome() {
+  let n = parseInt(document.getElementById("num").value);
+  if (n < 0) {
+    document.getElementById("result3").innerHTML = "Please enter a non-negative number";
+    return;
+  }
+  let original = n;
+  let reversed = 0;
+  while (n > 0) {
+    let digit = n % 10;       // get last digit
+    reversed = reversed * 10 + digit;  // build reversed number
+    n = Math.floor(n / 10);   // remove last digit
+  }
+  if (reversed === original) {
+    document.getElementById("result3").innerHTML = original + " is a Palindrome";
+  } else {
+    document.getElementById("result3").innerHTML = original + " is Not a Palindrome";
+  }
+}
+  </script>
+</body>
+</html>
+-----------------------------------------------------------------------------------------------------
+c. Write a program to validate the following fields in a registration page
+   i. Name(start with alphabet and followed by alphanumeric and the length should not be less than 6 characters
+   ii. Mobile(only numbers and length 10 digits
+   iii. E-mail(should contain format like xxxxxxx@xxxxxx.xxx)
+
+<!-- validation.html-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form Validation</title>
+</head>
+<body>
+  <h2>Registration Form</h2>
+
+  <form onsubmit="return validateForm()">
+   
+    <input type="text" id="name"placeholder="Enter your name">
+    <span id="nameMsg" style="color:red"></span>
+    <br><br>
+    <input type="tel" id="mobile" placeholder="Enter 10-digit mobile">
+    <span id="mobileMsg" style="color:red"></span>
+    <br><br>
+    <input type="email" id="email" placeholder="Enter email">
+    <span id="emailMsg" style="color:red"></span>
+    <br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="result" style="color:green"></p>
+
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value.trim();
+      let mobile = document.getElementById("mobile").value.trim();
+      let email = document.getElementById("email").value.trim();
+
+      let valid = true;
+
+      // Name validation
+      let namePattern = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+      if (!namePattern.test(name)) {
+        document.getElementById("nameMsg").innerHTML = " Invalid Name";
+        valid = false;
+      } else {
+        document.getElementById("nameMsg").innerHTML = "";
+      }
+
+      // Mobile validation
+      let mobilePattern = /^[0-9]{10}$/;
+      if (!mobilePattern.test(mobile)) {
+        document.getElementById("mobileMsg").innerHTML = " Invalid Mobile";
+        valid = false;
+      } else {
+        document.getElementById("mobileMsg").innerHTML = "";
+      }
+
+      // Email validation
+      let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+      if (!emailPattern.test(email)) {
+        document.getElementById("emailMsg").innerHTML = " Invalid Email";
+        valid = false;
+      } else {
+        document.getElementById("emailMsg").innerHTML = "";
+      }
+
+      if (valid) {
+        document.getElementById("result").innerHTML = "All fields are valid";
+      } else {
+        document.getElementById("result").innerHTML = "";
+      }
+
+      return false; // prevent form submission for demo
+    }
+  </script>
+</body>
+</html>
